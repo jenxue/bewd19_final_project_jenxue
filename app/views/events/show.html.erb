@@ -1,2 +1,8 @@
-<p><%= render 'event' %></p>
-<p><%= link_to "Back to home page", root_path %></p>
+<h3><b><%= @event.title %></b></h3>
+<p><%= @event.description %></p>
+<p>Start time: <%= @event.start_time %></p>
+<p>End time: <%= @event.end_time %></p>
+<p>Location: <%= @event.location %></p>
+<p>Registrants: <%= @event.registrants %></p>
+
+<%= button_to "RSVP", rsvps_new_path(@event), method: :get %> 

@@ -1,0 +1,19 @@
+<h1>Welcome to E-Spot</h1>
+
+
+<h3><%= "E-Spot lets you look for an event near you" %></h3>
+
+<%= form_tag '/', method: :get do %>
+  <%= search_field_tag :q, params[:q] %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<p>
+
+<%= "Can't find what you're looking for?  " %><%= link_to "Create an event!", new_event_path %>
+
+<hr/>
+<p>
+<%= render 'event' %>
+
+

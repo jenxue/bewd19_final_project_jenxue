@@ -1,0 +1,11 @@
+<% @event.each do | event | %>
+  <fieldset>
+  <legend><h3><b><%= link_to event.title, event_path(event.id) %></b></h3></legend>
+  <p><%= event.description %></p>
+  <p>Start time: <%= event.start_time %></p>
+  <p>End time: <%= event.end_time %></p>
+  <p>Location: <%= event.location %></p>
+  <p>Registrants: <%= event.registrants %></p>
+  </fieldset>
+  <p>
+<% end %>

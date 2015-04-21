@@ -12,20 +12,22 @@ Event.create 	title: "Yoga in the park",
 				start_time: "May 10, 2015 10:00am", 
 				end_time: "May 10, 2015 5:00pm", 
 				location: "Union Square, New York", 
-				upvote: "10"
+				registrants: 10
 
 Event.create 	title: "Jenny's Dinner Party", 
 				description: "Jenny's hosting her monthly dinner party, this time she's serving pizza!", 
 				start_time: "May 1, 2015 7:00pm", 
 				end_time: "May 1, 2015 10:00pm", 
 				location: "Jenny's apartment", 
-				upvote: "5"
+				registrants: 5
 
 Event.create 	title: "Summer sale", 
 				description: "Banana Republic is having a 25% summer sale", 
 				start_time: "May 7, 2015 10:00am", 
 				end_time: "May 15, 2015 5:00pm", 
 				location: "57 Fifth Ave, New York", 
-				upvote: "4"
+				registrants: 4
+
+				
 
 
