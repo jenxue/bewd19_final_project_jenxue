@@ -1,14 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'rsvps/index'
-
-  get 'rsvps/new'
-
-  get 'rsvps/show'
-
   devise_for :users
   root "home#index"
 
+  resources :rsvps
+  post 'rsvps/create', to: "rsvps#create"
   resources :events, only: [:new, :create, :show, :edit]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

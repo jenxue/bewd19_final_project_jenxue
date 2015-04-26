@@ -1,4 +1,5 @@
 <% @event.each do | event | %>
+
   <fieldset>
   <legend><h3><b><%= link_to event.title, event_path(event.id) %></b></h3></legend>
   <p><%= event.description %></p>

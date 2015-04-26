@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+
+
+ run RAILS_ENV=production rake assets:precompile in terminal --> this takes away all the empty spaces in the app 
