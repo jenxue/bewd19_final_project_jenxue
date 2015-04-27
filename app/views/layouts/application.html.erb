@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
   <title>E-Spot</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -8,22 +10,48 @@
 </head>
 <body>
 
-<%= link_to "E-Spot", root_path %>
-<% if user_signed_in? %>
-    <%= "Signed in as #{current_user.first_name}" %>
-    <%= link_to "Sign out", 
-    destroy_user_session_path, 
-    method: :delete %>
-<% else %>
-    <%= link_to "Sign up",
-    new_user_registration_path %>
-    <%= link_to "Sign in",
-    new_user_session_path %>
-<% end %>
+<nav class="top-bar">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#"><%= link_to "E-Spot", root_path %></a></h1>
+    </li>
+  </ul>
 
-<%= link_to "Create an event", new_event_path %>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#"><%= link_to "Create an event", new_event_path %></a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Left Nav Section -->
+    <ul class="right">
+      <li class="name">
+        <% if user_signed_in? %>
+          <h1><a href="#"><%= "Signed in as #{current_user.first_name}" %></a></h1>
+      </li>
+      <li class="name">
+          <h1><a href="#"><%= link_to "Sign out", 
+          destroy_user_session_path, 
+          method: :delete %></a></h1>
+      </li>
+      <li class="name">
+        <% else %>
+          <h1><a href="#"><%= link_to "Sign up",
+          new_user_registration_path %></a></h1>
+      </li>
+      <li class="name">
+          <h1><a href="#"><%= link_to "Sign in",
+          new_user_session_path %></a></h1>
+        <% end %>
+      </li>
+    </ul>
+  </section>
+</nav>
 
 <%= yield %>
 
 </body>
 </html>
+
+

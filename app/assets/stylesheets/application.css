@@ -12,7 +12,11 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+/*= require foundation */
 
-
- run RAILS_ENV=production rake assets:precompile in terminal --> this takes away all the empty spaces in the app 
+.a {
+  @include button($2px, $2px, $2px, $2px, $disabled, $is-input);
+}
