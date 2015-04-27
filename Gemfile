@@ -29,7 +29,6 @@ gem 'rails_12factor', group: :production
 
 gem 'devise'
 
-gem 'byebug'
 
 gem 'therubyracer'
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS

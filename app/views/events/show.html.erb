@@ -5,4 +5,6 @@
 <p>Location: <%= @event.location %></p>
 <p>Registrants: <%= @event.registrants %></p>
 
-<%= button_to "RSVP", rsvps_create_path %> 
+
+<%= button_to 'RSVP', {controller: "rsvps", action: "create", selected_event: @event} %>
+
