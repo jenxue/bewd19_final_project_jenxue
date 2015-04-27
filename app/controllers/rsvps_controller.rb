@@ -1,16 +1,14 @@
 class RsvpsController < ApplicationController
 
-  def new
-  	@rsvp = Rsvp.new
-  end
-
   def create
-  	@rsvp = Rsvp.new user_id: current_user.id, event_id: params[:id], rsvp_code: rand(10000..50000)
+  	@rsvp = Rsvp.new user_id: current_user.id, event_id: params[:selected_event], rsvp_code: rand(10000..50000)
   	if @rsvp.save
       redirect_to @rsvp
-    else
-      redirect_to @event
     end
+
+    @event = Event.find params[:selected_event]
+    @event.registrants += 1
+    @event.save
   end
 
   def show
