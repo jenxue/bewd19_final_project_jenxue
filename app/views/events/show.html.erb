@@ -7,10 +7,11 @@
 </style>
 
 <style>
-.event{text-align: left;
+.event{text-align: center;
 	color: #758EA9;
 	font-family: 'Asap', sans-serif;
 	font-size: 26px;
+	background-color: #FFFFC2;
 }
 </style>
 
@@ -24,6 +25,6 @@
 <p>Registrants: <%= @event.registrants %></p>
 </fieldset>
 
-
+<div style = "text-align: center">
 <%= button_to 'RSVP', {controller: "rsvps", action: "create", selected_event: @event}, :class => "button" %>
-
+</div>

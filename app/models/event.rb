@@ -4,9 +4,9 @@ class Event < ActiveRecord::Base
   	scope :popular, -> { where('registrants >= ?', 10)}
   	scope :recent, -> { where('created_at >= ?', Date.today)}
 
-  	def self.search_for(query)
-    	where('title LIKE :query OR description LIKE :query OR location LIKE :query', query: "%#{query}%")
-  	end
+  # 	def search(search)
+		# where('title LIKE :query OR description LIKE :query OR location LIKE :query', "%#{search}%")
+  # 	end
 
 	belongs_to :creator
 	

@@ -1,5 +1,8 @@
 class HomeController < ApplicationController
   def index
-  	@event = Event.all
+  	# @events = Event.all
+  	@events = Event.where(
+      'title LIKE :query OR description LIKE :query OR location LIKE :query',
+      query: "%#{params[:q]}%")
   end
 end

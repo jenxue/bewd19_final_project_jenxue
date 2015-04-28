@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :authenticate_user!
 
   # def index
-  #   @events = Event.all
+  #   @event = Event.search(params[:search])
   # end
 
   def show
@@ -46,8 +46,8 @@ class EventsController < ApplicationController
   end
   
 
-  def destroy
-     
-  end
+  # def search
+  #   where('title LIKE :query OR description LIKE :query OR location LIKE :query', "%#{search}%")
+  # end
 
 end

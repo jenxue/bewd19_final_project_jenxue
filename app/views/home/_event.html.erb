@@ -1,5 +1,5 @@
 <style>
-.event{background-image: url("City-lights-buildings.jpg");
+.event{background-color: #FFFFC2; 
 	text-align: center;
 	color: #758EA9;
 	font-family: 'Asap', sans-serif;
@@ -10,13 +10,13 @@
 
 #event_title{font-size: 20px;
 	font-family: 'Asap', sans-serif;
-	background-color: white;
+	background-color: #FFFFC2;
 	color: #758EA9;
 	text-align: center;
 }
 </style>
 
-<% @event.each do | event | %>
+<% @events.each do | event | %>
 
   <fieldset class = "event">
   <p id = "event_title"><b><%= link_to event.title, event_path(event.id) %></b></p>

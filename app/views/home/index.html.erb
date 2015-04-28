@@ -14,29 +14,43 @@
 }
 
 body{
-    background-image: url: "City-lights-buildings.jpg";
+    background-image: img src: "assets/images/City-lights-buildings.jpg", alt: "City-lights-buildings";
 }
+
+.header{padding-top: 6cm;
+	padding-bottom: 10cm;
+}
+
 </style>
 
+<div style="padding-top: 4cm; padding-bottom: 1cm";>
 <h1 class = "title">Welcome to E-Spot</h1>
 
 <p class = "description", id = "center"><%= "E-Spot lets you look for an event near you. You can search by event name, description or location:" %></h3>
 
-
-<%= form_tag '/events/show', method: :get do %>
+<%= form_tag '/', method: :get do %>
   <%= search_field_tag :q, params[:q] %>
-  <%= submit_tag "Search", :class => "button" %>
+  <div style="text-align: center;">
+  	<%= submit_tag "Search", :class => "button" %>
+  </div>
 <% end %>
-
+</div>
 <p>
 
-<p class = "description", id = "center"><%= "Can't find what you're looking for?  " %></p>
-
-<%= form_tag "/events/new", method: :get do %>
- <%= submit_tag "Create an event", :class => "button" %> 
-
-<% end %>
-
+<div>
+<p class = "description", id = "center", style="padding-top: 1cm"><%= "See events happening around you:" %></h3>
 
 <%= render 'event' %>
+</div>
 
+
+<div style = "background-color: #333333; padding-top: 0.5cm;">
+<p class = "description"; id = "center";><%= "Can't find what you're looking for?  " %></p>
+
+<%= form_tag "/events/new", method: :get do %>
+<div style="text-align: center;">
+ 	<%= submit_tag "Create an event", :class => "button" %> 
+ </div>
+<% end %>
+
+</div>
