@@ -3,31 +3,34 @@
 	color: #3A5E84;
 	font-family: 'Righteous', cursive;
 }
-</style>
 
-<style>
 .description{text-align: left;
 	color: #758EA9;
 	font-family: 'Asap', sans-serif;
 	font-size: 20px
 }
+
+#center{text-align: center;
+}
+
+body{
+    background-image: url: "City-lights-buildings.jpg";
+}
 </style>
-
-
 
 <h1 class = "title">Welcome to E-Spot</h1>
 
-<p class = "description"><%= "E-Spot lets you look for an event near you. You can search by event name, description or location:" %></h3>
+<p class = "description", id = "center"><%= "E-Spot lets you look for an event near you. You can search by event name, description or location:" %></h3>
 
 
-<%= form_tag '/', method: :get do %>
+<%= form_tag '/events/show', method: :get do %>
   <%= search_field_tag :q, params[:q] %>
   <%= submit_tag "Search", :class => "button" %>
 <% end %>
 
 <p>
 
-<p class = "description"><%= "Can't find what you're looking for?  " %></p>
+<p class = "description", id = "center"><%= "Can't find what you're looking for?  " %></p>
 
 <%= form_tag "/events/new", method: :get do %>
  <%= submit_tag "Create an event", :class => "button" %> 

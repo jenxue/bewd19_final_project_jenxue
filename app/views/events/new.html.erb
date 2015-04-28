@@ -1,7 +1,14 @@
-<h1>Create a new event</h1>
+<style>
+.title{text-align: center;
+  color: #3A5E84;
+  font-family: 'Righteous', cursive;
+}
+</style>
+
+<h1 class = "title">Create a new event</h1>
 <%= form_for @event do |f| %>
   <fieldset>
-    <legend>Event</legend>
+    
     <div class='fields'>
       <%= f.label :title %>
       <%= f.text_field :title %>
