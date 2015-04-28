@@ -17,6 +17,32 @@
  */
 /*= require foundation */
 
-.a {
-  @include button($2px, $2px, $2px, $2px, $disabled, $is-input);
+<style>
+.title{text-align: center;
+	color: #3A5E84;
+	font-family: 'Righteous', cursive;
 }
+</style>
+
+
+<style>
+.button{position: ;
+	text-align: center;
+	background: #758EA9;
+	font-family: 'Asap', sans-serif;
+	font-size: 16px
+	button-font-color: white;
+}
+</style>
+
+
+<style>
+.event{text-align: left;
+	color: #758EA9;
+	font-family: 'Asap', sans-serif;
+	font-size: 26px
+}
+</style>
+
+
+

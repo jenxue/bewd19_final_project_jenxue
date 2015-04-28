@@ -1,19 +1,39 @@
-<h1>Welcome to E-Spot</h1>
+<style>
+.title{text-align: center;
+	color: #3A5E84;
+	font-family: 'Righteous', cursive;
+}
+</style>
+
+<style>
+.description{text-align: left;
+	color: #758EA9;
+	font-family: 'Asap', sans-serif;
+	font-size: 20px
+}
+</style>
 
 
-<h3><%= "E-Spot lets you look for an event near you" %></h3>
+
+<h1 class = "title">Welcome to E-Spot</h1>
+
+<p class = "description"><%= "E-Spot lets you look for an event near you. You can search by event name, description or location:" %></h3>
+
 
 <%= form_tag '/', method: :get do %>
   <%= search_field_tag :q, params[:q] %>
-  <%= submit_tag "Search" %>
+  <%= submit_tag "Search", :class => "button" %>
 <% end %>
 
 <p>
 
-<%= "Can't find what you're looking for?  " %><%= link_to "Create an event!", new_event_path %>
+<p class = "description"><%= "Can't find what you're looking for?  " %></p>
 
-<hr/>
-<p>
+<%= form_tag "/events/new", method: :get do %>
+ <%= submit_tag "Create an event", :class => "button" %> 
+
+<% end %>
+
+
 <%= render 'event' %>
-
 

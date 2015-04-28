@@ -5,6 +5,8 @@
 
   <title>E-Spot</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -28,21 +30,21 @@
     <ul class="right">
       <li class="name">
         <% if user_signed_in? %>
-          <h1><a href="#"><%= "Signed in as #{current_user.first_name}" %></a></h1>
+          <h3><a href="#"><%= "Signed in as #{current_user.first_name}" %></a></h3>
       </li>
       <li class="name">
-          <h1><a href="#"><%= link_to "Sign out", 
+          <h3><a href="#"><%= link_to "Sign out", 
           destroy_user_session_path, 
-          method: :delete %></a></h1>
+          method: :delete %></a></h3>
       </li>
       <li class="name">
         <% else %>
-          <h1><a href="#"><%= link_to "Sign up",
-          new_user_registration_path %></a></h1>
+          <h3><a href="#"><%= link_to "Sign up",
+          new_user_registration_path %></a></h3>
       </li>
       <li class="name">
-          <h1><a href="#"><%= link_to "Sign in",
-          new_user_session_path %></a></h1>
+          <h3><a href="#"><%= link_to "Sign in",
+          new_user_session_path %></a></h3>
         <% end %>
       </li>
     </ul>

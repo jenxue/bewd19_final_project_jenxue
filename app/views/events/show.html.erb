@@ -1,10 +1,28 @@
-<h3><b><%= @event.title %></b></h3>
+<style>
+.title{text-align: center;
+	color: #3A5E84;
+	font-family: 'Righteous', cursive;
+}
+</style>
+
+<style>
+.event{text-align: left;
+	color: #758EA9;
+	font-family: 'Asap', sans-serif;
+	font-size: 26px
+}
+</style>
+
+
+<h3 class = "title"><b><%= @event.title %></b></h3>
+<fieldset class = "event">
 <p><%= @event.description %></p>
 <p>Start time: <%= @event.start_time %></p>
 <p>End time: <%= @event.end_time %></p>
 <p>Location: <%= @event.location %></p>
 <p>Registrants: <%= @event.registrants %></p>
+</fieldset>
 
 
-<%= button_to 'RSVP', {controller: "rsvps", action: "create", selected_event: @event} %>
+<%= button_to 'RSVP', {controller: "rsvps", action: "create", selected_event: @event}, :class => "button" %>
 
